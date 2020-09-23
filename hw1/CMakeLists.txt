@@ -5,23 +5,23 @@ set(CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
 set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 
 # CONFIG option is important so that CMake doesnt search for modules into the default modules directory
-find_package(imgui CONFIG)
-find_package(glfw CONFIG)
-find_package(glew CONFIG)
-find_package(fmt CONFIG)
-find_package(glm CONFIG)
-find_package(stb CONFIG)
+find_package(imgui CONFIG REQUIRED)
+find_package(glfw CONFIG REQUIRED)
+find_package(glew CONFIG REQUIRED)
+find_package(fmt CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(stb CONFIG REQUIRED)
 
-add_executable( opengl-imgui-sample
-                main.cpp
-                opengl_shader.cpp
-                opengl_shader.h
-                bindings/imgui_impl_glfw.cpp
-                bindings/imgui_impl_opengl3.cpp
-                bindings/imgui_impl_glfw.h
-                bindings/imgui_impl_opengl3.h
-                assets/simple-shader.vs
-                assets/simple-shader.fs )
+add_executable(opengl-imgui-sample
+        main.cpp
+        opengl_shader.cpp
+        opengl_shader.h
+        bindings/imgui_impl_glfw.cpp
+        bindings/imgui_impl_opengl3.cpp
+        bindings/imgui_impl_glfw.h
+        bindings/imgui_impl_opengl3.h
+        assets/simple-shader.vs
+        assets/simple-shader.fs)
 
 add_custom_command(TARGET opengl-imgui-sample
     POST_BUILD

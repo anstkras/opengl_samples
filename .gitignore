@@ -1,5 +1,5 @@
-bindings
-build
+hw1/bindings
+hw1/build
 *.exe
 *.dll
-imgui.ini
+hw1/imgui.ini
