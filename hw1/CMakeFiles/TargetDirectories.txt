@@ -1,3 +1,0 @@
-/home/anstkras/AU/comp-graphics/comp_graphics/hw1/CMakeFiles/rebuild_cache.dir
-/home/anstkras/AU/comp-graphics/comp_graphics/hw1/CMakeFiles/edit_cache.dir
-/home/anstkras/AU/comp-graphics/comp_graphics/hw1/CMakeFiles/opengl-imgui-sample.dir
