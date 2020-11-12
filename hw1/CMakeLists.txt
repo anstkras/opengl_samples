@@ -21,14 +21,14 @@ add_executable(opengl-imgui-sample
         bindings/imgui_impl_glfw.h
         bindings/imgui_impl_opengl3.h
         assets/simple-shader.vs
-        assets/simple-shader.fs
-        assets/gradient.png)
+        assets/simple-shader.fs)
 
 add_custom_command(TARGET opengl-imgui-sample
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/assets/simple-shader.vs ${PROJECT_BINARY_DIR}
-    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/assets/simple-shader.fs ${PROJECT_BINARY_DIR}
-)
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/assets/simple-shader.vs ${PROJECT_BINARY_DIR}
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/assets/simple-shader.fs ${PROJECT_BINARY_DIR}
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/assets/gradient.png ${PROJECT_BINARY_DIR}
+        )
 
 target_compile_definitions(opengl-imgui-sample PUBLIC IMGUI_IMPL_OPENGL_LOADER_GLEW)
 target_link_libraries(opengl-imgui-sample imgui::imgui GLEW::glew_s glfw::glfw fmt::fmt glm::glm stb::stb)
