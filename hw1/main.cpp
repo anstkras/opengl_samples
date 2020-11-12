@@ -77,7 +77,7 @@ void window_size_callback(GLFWwindow *window, int width, int height);
 void load_image(GLuint &texture) {
     int width, height, channels;
 
-    unsigned char *image = stbi_load("assets/gradient.png",
+    unsigned char *image = stbi_load("gradient.png",
                                      &width,
                                      &height,
                                      &channels,

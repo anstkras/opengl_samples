@@ -21,7 +21,8 @@ add_executable(opengl-imgui-sample
         bindings/imgui_impl_glfw.h
         bindings/imgui_impl_opengl3.h
         assets/simple-shader.vs
-        assets/simple-shader.fs)
+        assets/simple-shader.fs
+        assets/gradient.png)
 
 add_custom_command(TARGET opengl-imgui-sample
     POST_BUILD
