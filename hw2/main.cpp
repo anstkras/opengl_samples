@@ -11,8 +11,8 @@
 
 // Imgui + bindings
 #include "imgui.h"
-#include "../bindings/imgui_impl_glfw.h"
-#include "../bindings/imgui_impl_opengl3.h"
+#include "bindings/imgui_impl_glfw.h"
+#include "bindings/imgui_impl_opengl3.h"
 
 // Include glfw3.h after our OpenGL definitions
 #include <GLFW/glfw3.h>

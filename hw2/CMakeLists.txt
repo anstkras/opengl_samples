@@ -20,10 +20,10 @@ add_executable(opengl-imgui-sample
         main.cpp
         opengl_shader.cpp
         opengl_shader.h
-        ../bindings/imgui_impl_glfw.cpp
-        ../bindings/imgui_impl_opengl3.cpp
-        ../bindings/imgui_impl_glfw.h
-        ../bindings/imgui_impl_opengl3.h
+        bindings/imgui_impl_glfw.cpp
+        bindings/imgui_impl_opengl3.cpp
+        bindings/imgui_impl_glfw.h
+        bindings/imgui_impl_opengl3.h
         assets/cubemap-shader.vs
         assets/cubemap-shader.fs
         assets/model.vs
