@@ -8,15 +8,22 @@ in vec3 position;
 uniform vec3 camera_position;
 uniform samplerCube cubemap;
 uniform float refractive_index;
+uniform bool is_refractive;
 
 void main()
 {
     vec3 N = normalize(normal);
     vec3 I = normalize(position - camera_position);
     vec3 refl = reflect(I, normalize(normal));
+    vec3 reflect_texture = texture(cubemap, refl).rgb;
+
+    if (!is_refractive) {
+        o_frag_color = vec4(reflect_texture, 1.0);
+        return;
+    }
+
     vec3 refr = refract(I, normalize(normal), 1.0 / refractive_index);
 
-    vec3 reflect_texture = texture(cubemap, refl).rgb;
     vec3 refract_texture = texture(cubemap, refr).rgb;
 
     float cosi = abs(dot(I, N));

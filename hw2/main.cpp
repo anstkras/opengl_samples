@@ -329,6 +329,8 @@ int main(int, char **) {
 
             ImGui::Begin("Settings");
             static float refractive_index = 2;
+            static bool is_refractive = true;
+            ImGui::Checkbox("refractive", &is_refractive);
             ImGui::SliderFloat("refractive index", &refractive_index, 1, 5);
             ImGui::End();
 
@@ -361,6 +363,7 @@ int main(int, char **) {
             bunny_shader.set_uniform("model", glm::value_ptr(model));
             bunny_shader.set_uniform("view", glm::value_ptr(object_view));
             bunny_shader.set_uniform("cubemap", int(0));
+            bunny_shader.set_uniform("is_refractive", is_refractive);
             bunny_shader.set_uniform("refractive_index", refractive_index);
             bunny_shader.set_uniform("camera_position", direction.x, direction.y, direction.z);
 
